@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Dark Emerald Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040906" />
+      <stop offset="50%" stop-color="#07130C" />
+      <stop offset="100%" stop-color="#0D2115" />
+    </linearGradient>
+
+    <!-- Emerald Leaf Metallic Glow Gradient -->
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4ADE80" />
+      <stop offset="50%" stop-color="#22C55E" />
+      <stop offset="100%" stop-color="#15803D" />
+    </linearGradient>
+
+    <!-- Gold Edge Accent Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FACC15" />
+      <stop offset="100%" stop-color="#CA8A04" />
+    </linearGradient>
+
+    <!-- Subtle Ambient Glow -->
+    <filter id="emeraldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Shield Container -->
+  <rect width="512" height="512" rx="100" fill="url(#bgGrad)" />
+  <rect x="16" y="16" width="480" height="480" rx="84" fill="none" stroke="#1A3324" stroke-width="2" />
+
+  <!-- Outer Geometric Octagon / Diamond Badge -->
+  <polygon points="256,44 456,144 456,368 256,468 56,368 56,144" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" opacity="0.4" />
+
+  <!-- Inner Concentric Frame -->
+  <circle cx="256" cy="256" r="176" fill="#061209" stroke="#1F402C" stroke-width="3" />
+
+  <!-- Main Sprout / Tropical Foliage Emblem -->
+  <g filter="url(#emeraldGlow)">
+    <!-- Main Center Leaf -->
+    <path d="M256 120 C256 120 340 180 340 270 C340 330 300 376 256 384 C212 376 172 330 172 270 C172 180 256 120 256 120 Z" 
+          fill="url(#leafGrad)" />
+    
+    <!-- Left Curved Side Leaf -->
+    <path d="M256 260 C210 240 140 250 124 300 C110 340 150 370 190 356 C220 345 246 310 256 260 Z" 
+          fill="#166534" opacity="0.9" />
+
+    <!-- Right Curved Side Leaf -->
+    <path d="M256 260 C302 240 372 250 388 300 C402 340 362 370 322 356 C292 345 266 310 256 260 Z" 
+          fill="#22C55E" opacity="0.8" />
+
+    <!-- Central Leaf Vein & Stem (Gold Accent) -->
+    <path d="M256 395 L256 140" stroke="url(#goldGrad)" stroke-width="4" stroke-linecap="round" />
+    <path d="M256 220 Q290 200 315 210" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M256 250 Q218 230 195 240" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M256 280 Q298 265 322 278" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M256 310 Q214 298 192 308" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linecap="round" />
+  </g>
+
+  <!-- Star Botanical Accents -->
+  <circle cx="256" cy="80" r="4" fill="#FACC15" />
+  <circle cx="120" cy="256" r="3" fill="#4ADE80" opacity="0.6" />
+  <circle cx="392" cy="256" r="3" fill="#4ADE80" opacity="0.6" />
+</svg>
